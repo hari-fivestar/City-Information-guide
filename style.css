@@ -1,0 +1,667 @@
+    /* Global Styles */
+    
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: repeating-linear-gradient(90deg, #0D47A1, #42A5F5, #42A5F5, #0D47A1);
+        color: navy;
+    }
+    /* Header */
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #003366;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+        color: #eef6f7;
+    }
+    
+    .btn1 {
+        height: 40px;
+        width: 100px;
+        background-color: skyblue;
+        border: 2px solid white;
+        border-radius: 10px;
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .btn1:hover {
+        background-color: white;
+        color: skyblue;
+    }
+    
+    .main-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 20px;
+    }
+    
+    .main-nav a {
+        text-decoration: none;
+        color: #eef6f7;
+        font-size: 20px;
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        font-size: 30px;
+        color: #eef6f7;
+        position: relative;
+    }
+    
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background: #eef6f7;
+        transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    /* News */
+    
+    .news-scroll marquee {
+        background-color: #f8d200;
+        color: #000;
+        height: auto;
+        margin: 0;
+        font-weight: bold;
+        padding: 8px;
+        font-size: 16px;
+        border-bottom: 2px solid #ccc;
+    }
+    /* Welcome Section */
+    
+    .welcome,
+    .essential-features,
+    .landmarks-slider,
+    .key-people,
+    .city-zones,
+    .places-to-visit,
+    .history-city,
+    .about-city,
+    .city-map,
+    .contact-us {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 40px 20px;
+        margin: 50px 60px;
+        text-align: center;
+        height: auto;
+    }
+    
+    .welcome2 {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .welcome2 img {
+        height: 200px;
+        width: 200px;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    
+    .welcome-scroll {
+        background: linear-gradient(to bottom, darkorange 0 35%, white 35% 65%, green 65% 100%);
+        height: 125px;
+        width: 700px;
+        margin: 20px auto;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .top-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    
+    .top-buttons button {
+        padding: 10px 20px;
+        background-color: #004080;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .top-buttons button:hover {
+        background-color: #0066cc;
+    }
+    /* Essential Features */
+    
+    .essential-features h2,
+    .landmarks-slider h2,
+    .key-people h2,
+    .city-zones h2,
+    .places-to-visit h2,
+    .history-city h2,
+    .about-city h2,
+    .city-map h2,
+    .contact-us h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #003366;
+    }
+    
+    .feature-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .feature-buttons button {
+        margin-top: 20px;
+        background-color: #008080;
+        color: white;
+        height: 110px;
+        width: 110px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .feature-buttons button:hover {
+        background-color: #006666;
+    }
+    /* Landmarks Slider */
+    
+    .slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .slides-container {
+        display: flex;
+        overflow: hidden;
+        max-width: 900px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .slide {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: whitesmoke;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    .slide.active {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .slide img {
+        max-height: 400px;
+        width: 100%;
+        border: 2px solid black;
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .slide big {
+        padding: 10px;
+    }
+    
+    .slide p {
+        text-align: left;
+        font-size: 16px;
+        color: black;
+    }
+    
+    .nav-button {
+        user-select: none;
+        font-size: 30px;
+        background: whitesmoke;
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+        align-items: center;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        color: #333;
+        height: 100%;
+    }
+    /* key-people */
+    
+    .key-people {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 40px 20px;
+        margin: 50px 60px;
+        text-align: center;
+    }
+    
+    .key-people h2 {
+        margin-bottom: 30px;
+        font-size: 28px;
+        color: #003366;
+    }
+    
+    .people-cards {
+        height: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+        overflow-y: auto;
+    }
+    
+    .person-cards {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        border-radius: 10px;
+    }
+    
+    .person-card {
+        height: 300px;
+        width: 220px;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .person-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .person-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    
+    .person-card h3 {
+        margin: 10px 0 5px;
+        font-size: 18px;
+        color: #003366;
+    }
+    
+    .person-card p {
+        margin: 0;
+        font-size: 16px;
+        color: black;
+    }
+    /* city-zones */
+    
+    .city-zones {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 40px 20px;
+        margin: 50px 60px;
+        text-align: center;
+    }
+    
+    .city-zones h2 {
+        margin-bottom: 30px;
+        font-size: 28px;
+        color: #003366;
+    }
+    
+    .zone-cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    .zone-card1,
+    .zone-card2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    .zone-card {
+        width: 400px;
+        height: 300px;
+        padding: 15px;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .zone-card:hover {
+        transform: translateY(-8px);
+    }
+    
+    .zone-card a {
+        text-decoration: none;
+    }
+    
+    .zone-card img {
+        width: 50%;
+        height: 150px;
+        margin-top: 10px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    
+    .zone-card h3 {
+        margin: 12px 0 5px;
+        font-size: 20px;
+        color: #003366;
+    }
+    
+    .zone-card p {
+        font-size: 14px;
+        color: black;
+    }
+    /* places-to-visit.css */
+    
+    .places-to-visit {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 40px 20px;
+        margin: 50px 60px;
+        text-align: center;
+    }
+    
+    .places-to-visit h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        color: #003366;
+    }
+    /* Wrapper: nav buttons + grid viewport */
+    
+    .visit-grid-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .grid-viewport {
+        overflow: hidden;
+        width: calc(250px * 4 + 20px * 3);
+        border-radius: 10px;
+    }
+    
+    .visit-grid {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        transition: transform 0.5s ease-in-out;
+    }
+    /* Place card */
+    
+    .place-card {
+        background-color: whitesmoke;
+        border-radius: 10px;
+        width: 200px;
+        flex-shrink: 0;
+        padding: 10px;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+    
+    .place-card:hover {
+        transform: scale(1.03);
+    }
+    
+    .place-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    .place-card h3 {
+        margin: 12px 0 5px;
+        font-size: 20px;
+        color: #003366;
+    }
+    
+    .place-card p {
+        font-size: 16px;
+        color: black;
+    }
+    /* Navigation buttons */
+    
+    .prev,
+    .next {
+        font-size: 30px;
+        background: whitesmoke;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        color: black;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* history-city */
+    
+    .history-city {
+        background-color: #fff;
+        border-radius: 10px;
+        height: auto;
+        padding: 40px 20px;
+        margin-top: 50px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    
+    .history-text h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #003366;
+    }
+    
+    .ph {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .sph {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .pha {
+        height: 450px;
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .pha:hover {
+        transform: scale(1.05);
+    }
+    
+    .pha h3 {
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        background-color: white;
+        color: #003366;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .pha h3:hover {
+        transform: scale(1.03);
+    }
+    
+    .pha-text {
+        color: black;
+        text-align: left;
+    }
+    
+    .pha-text p {
+        font-size: 16px;
+    }
+    /* about-city */
+    
+    .about-city {
+        background-color: #fff;
+        border-radius: 10px;
+        height: 650px;
+        padding: 40px 40px;
+        margin-top: 50px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    
+    .abouta {
+        background: whitesmoke;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .about-text {
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .about-city h2 {
+        font-size: 28px;
+        color: #003366;
+        margin-bottom: 20px;
+    }
+    
+    .about-text p {
+        font-size: 16px;
+        color: black;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .city-facts {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    
+    .city-facts li {
+        font-size: 15px;
+        color: black;
+        padding: 5px 150px;
+        text-align: left;
+    }
+    /* city-map */
+    
+    .city-map {
+        padding: 50px 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        height: auto;
+        padding: 40px 20px;
+        margin-top: 50px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    
+    .city-map h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #003366;
+    }
+    /* map-container for map iframe */
+    
+    .map-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        border: 3px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    /* Contact Us */
+    /* Contact Section Container */
+    
+    .contact-us {
+        padding: 50px 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        height: auto;
+        padding: 40px 20px;
+        margin-top: 50px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    /* Section Heading */
+    
+    .contact-us h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #003366;
+    }
+    /* form container for google form iframe*/
+    
+    .form-container {
+        width: 100%;
+        max-width: 800px;
+        height: 800px;
+        margin: 0 auto;
+        border: 3px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }

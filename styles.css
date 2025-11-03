@@ -1,0 +1,149 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Body Styling */
+
+body {
+    background: linear-gradient(to bottom, #f7f8fc, #e1e5ee);
+    color: #222;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 40px 20px; */
+}
+
+
+/* Section Wrapper */
+
+.zone-detail {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    /* max-width: 900px; */
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Headings */
+
+.zone-detail h1 {
+    font-size: 40px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.zone-detail h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #2980b9;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.zone-detail h2 {
+    font-size: 28px;
+    margin: 25px 0 10px;
+    color: #34495e;
+}
+
+
+/* Paragraphs */
+
+.zone-detail p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #444;
+}
+
+
+/* Lists */
+
+.zone-detail ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.zone-detail li {
+    margin-bottom: 8px;
+    font-size: 17px;
+    position: relative;
+    padding-left: 20px;
+}
+
+
+/* .zone-detail li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+} */
+
+
+/* Back Button */
+
+.zone-detail a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: #2980b9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.zone-detail a:hover {
+    background: #1f6391;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .zone-detail {
+        padding: 25px;
+    }
+    .zone-detail h1 {
+        font-size: 30px;
+    }
+    .zone-detail h2 {
+        font-size: 22px;
+    }
+    .zone-detail p,
+    .zone-detail li {
+        font-size: 16px;
+    }
+}
